@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Snake Game - Classic Arcade</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="page-shell">
+        <header class="hero">
+            <div class="hero-brand">
+                <p class="eyebrow">Classic Arcade</p>
+                <h1>Snake</h1>
+                <p class="description">
+                    A clean, modern, and fully responsive Snake game with smooth animation, touch D-Pad controls, particle effects, and high score tracking.
+                </p>
+            </div>
+            <div class="stats-panel">
+                <div class="stat-card">
+                    <span class="stat-label">Score</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Best</span>
+                    <span id="bestScore">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="game-card">
+                <div class="game-header">
+                    <div>
+                        <p class="game-title">Game Board</p>
+                        <p class="game-subtitle">Arrow keys / WASD / Swipe / Touch D-Pad</p>
+                    </div>
+                    <div class="header-actions">
+                        <button id="pauseButton" class="secondary-button" aria-label="Pause Game">Pause</button>
+                        <button id="restartButton" class="accent-button" aria-label="Restart Game">Restart</button>
+                    </div>
+                </div>
+
+                <div class="canvas-wrapper">
+                    <canvas id="gameCanvas" width="640" height="480"></canvas>
+                </div>
+
+                <div class="controls-hint">
+                    <span>Keyboard: Arrow keys / WASD | Space: Pause | R: Restart</span>
+                </div>
+
+                <!-- On-Screen Virtual D-Pad for Mobile & Touch Devices -->
+                <div class="touch-controls" id="touchControls">
+                    <div class="dpad">
+                        <button id="dpadUp" class="dpad-btn dpad-up" aria-label="Move Up">▲</button>
+                        <div class="dpad-middle">
+                            <button id="dpadLeft" class="dpad-btn dpad-left" aria-label="Move Left">◀</button>
+                            <button id="dpadCenter" class="dpad-btn dpad-center" aria-label="Pause">⏸</button>
+                            <button id="dpadRight" class="dpad-btn dpad-right" aria-label="Move Right">▶</button>
+                        </div>
+                        <button id="dpadDown" class="dpad-btn dpad-down" aria-label="Move Down">▼</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info-card">
+                <h2>How to play</h2>
+                <ul>
+                    <li>Eat the glowing food pellets to grow your snake.</li>
+                    <li>Avoid hitting the border walls or your own snake body.</li>
+                    <li>Use touch controls, swipe gestures, or keyboard keys to steer.</li>
+                    <li>Compete to beat your personal high score!</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
