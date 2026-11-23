@@ -1,4 +1,5 @@
-my name-subrat dev singh
+My name is subrat dev singh
+<br>
 <<<<<<< HEAD
 <<<<<<< HEAD
 # SNAKE-GAME-C-
